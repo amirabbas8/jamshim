@@ -38,11 +38,11 @@ public class EventActivity extends AppCompatActivity {
         eventList.add(new EventFeedItem("3","کافه بالسا","تراکتور سازی - سیاه جامگان","تبریز"));
         eventList.add(new EventFeedItem("4","کافه لژان","مس کرمان- استقلال خوزستان","کرمان"));
         eventList.add(new EventFeedItem("5","کافه سفید","تربیت یزد - صنعت نفت","یزد"));
-        eventList.add(new EventFeedItem("6","کافه زاگرش","استقلال - پرسپولیس","تهران"));
-        eventList.add(new EventFeedItem("7","کافه هرمس","ذوب آهن - سپاهان","اصفهان"));
-        eventList.add(new EventFeedItem("8","کافه بالسا","تراکتور سازی - سیاه جامگان","تبریز"));
-        eventList.add(new EventFeedItem("9","کافه لژان","مس کرمان- استقلال خوزستان","کرمان"));
-        eventList.add(new EventFeedItem("10","کافه سفید","تربیت یزد - صنعت نفت","یزد"));
+        eventList.add(new EventFeedItem("6","کافه زاگرش","بورنموث - برایتون","تهران"));
+        eventList.add(new EventFeedItem("7","کافه هرمس","لیورپول - برنلی","اصفهان"));
+        eventList.add(new EventFeedItem("8","کافه بالسا","هانوفر - هامبورگ","تبریز"));
+        eventList.add(new EventFeedItem("9","کافه لژان","رءال سوسیاد - رءال مادرید","کرمان"));
+        eventList.add(new EventFeedItem("10","کافه سفید","خیرونیا - سویا","یزد"));
         eventList.add(eventFeedItem);
         mAdapter.notifyDataSetChanged();
     }
