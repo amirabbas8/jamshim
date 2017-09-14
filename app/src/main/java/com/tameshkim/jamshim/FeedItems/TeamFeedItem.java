@@ -6,7 +6,10 @@ public class TeamFeedItem {
 
     public TeamFeedItem() {
     }
-
+    public TeamFeedItem(String id,String teams) {
+        this.id=id;
+        this.teams=teams;
+    }
 
     public String getId() {
         return id;

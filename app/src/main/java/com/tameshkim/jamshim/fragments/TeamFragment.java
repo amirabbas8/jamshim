@@ -57,11 +57,11 @@ public class TeamFragment extends Fragment {
 
 
         Spinner spinner = (Spinner) rootView.findViewById(R.id.spinner);
-        String[] arrayStrings=new String[]{"خدمت اصلی","خدمت دوم","خدمت سوم"};
+        String[] arrayStrings=new String[]{"فوتبال"};
         ArrayAdapter adapter=new ArrayAdapter<>(this.getContext(),R.layout.spiner_item,arrayStrings);
         spinner.setAdapter(adapter);
         Spinner spinner2 = (Spinner) rootView.findViewById(R.id.spinner2);
-        String[] arrayStrings2=new String[]{"خدمت اصلی","خدمت دوم","خدمت سوم"};
+        String[] arrayStrings2=new String[]{"جام خلیج فارسی","لیگ برتر انگلیس","لالیگا اسپانیا","بندسلیگاآلمان"};
         ArrayAdapter<String> adapter2=new ArrayAdapter<>(this.getContext(),R.layout.spiner_item,arrayStrings2);
         spinner2.setAdapter(adapter2);
         return rootView;
