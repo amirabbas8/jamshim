@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.widget.TextView;
 
 import com.tameshkim.jamshim.fragments.HomeFragment;
+import com.tameshkim.jamshim.fragments.TeamFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,12 +52,7 @@ public class MainActivity extends AppCompatActivity {
         TextView tabMyLife = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
         tabMyLife.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_home, 0, 0);
         tabLayout.getTabAt(1).setCustomView(tabMyLife);
-        TextView tabSearch = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
-        tabSearch.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_home, 0, 0);
-        tabLayout.getTabAt(2).setCustomView(tabSearch);
-//        TextView tabAthena = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
-//        tabAthena.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_mic_none_white, 0, 0);
-//        tabLayout.getTabAt(3).setCustomView(tabAthena);
+
 
     }
 
@@ -65,8 +61,7 @@ public class MainActivity extends AppCompatActivity {
         ViewPagerAdapter adapter;
         adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFrag(new HomeFragment(), "");
-        adapter.addFrag(new HomeFragment(), "");
-        adapter.addFrag(new HomeFragment(), "");
+        adapter.addFrag(new TeamFragment(), "");
         viewPager.setAdapter(adapter);
 
     }

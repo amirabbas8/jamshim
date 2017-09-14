@@ -12,6 +12,24 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/amirabbas/jamshim/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="30c70ad103c7d9ef81ebccdce79c70510fdbda2a">
+        <dex dex="/home/amirabbas/jamshim/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_1a5dcf125512f62092f5f97975ffdf85f9d9200b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amirabbas/jamshim/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="caff8e51a24901cfc9cd7e1cf83d84f4cb0c103b">
+        <dex dex="/home/amirabbas/jamshim/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_0dea414a8f28705a14ad8872b76c13aae60c7623/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/amirabbas/Downloads/Jamshim/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
