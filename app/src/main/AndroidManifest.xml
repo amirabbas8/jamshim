@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".CafeActivity" />
-        <activity android:name=".EventActivity"></activity>
+        <activity android:name=".EventActivity" />
+        <activity android:name=".BuyActivity"></activity>
     </application>
 
 </manifest>
