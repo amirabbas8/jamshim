@@ -15,15 +15,41 @@
     android:layout_margin="5dp"
     app:cardBackgroundColor="#FFFFFF"
     card_view:cardCornerRadius="4dp">
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/feed_item"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-
-
-
-    </RelativeLayout>
+        android:orientation="horizontal"
+        android:layout_height="90dp">
+        <LinearLayout
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="00:00"
+                android:gravity="center"
+                android:textSize="25sp"/>
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="تیم اول # تیم دوم"
+                android:gravity="center"
+                android:textSize="25sp"/>
+        </LinearLayout>
+        <TextView
+            android:layout_weight="1"
+            android:width="0dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="اسم کافه"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:layout_gravity="center"/>
+    </LinearLayout>
 </android.support.v7.widget.CardView>
 
 </RelativeLayout>
