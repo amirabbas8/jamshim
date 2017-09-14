@@ -1,6 +1,5 @@
 package com.tameshkim.jamshim;
 
-import android.content.Context;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -31,13 +30,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        getSupportActionBar().setIcon(R.mipmap.ic_launcher);
-        LayoutInflater inflater = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
         setupViewPager(viewPager);
-        viewPager.setCurrentItem(1);
-        viewPager.setOffscreenPageLimit(2);
+        viewPager.setCurrentItem(0);
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
         setupTabIcons();
@@ -50,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         tabPeople.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_home, 0, 0);
         tabLayout.getTabAt(0).setCustomView(tabPeople);
         TextView tabMyLife = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
-        tabMyLife.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_home, 0, 0);
+        tabMyLife.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_timeline, 0, 0);
         tabLayout.getTabAt(1).setCustomView(tabMyLife);
 
 

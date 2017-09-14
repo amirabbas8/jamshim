@@ -17,29 +17,7 @@ public class HomeFeedItem {
         this.id = id;
     }
 
-    public boolean getPrgLiking() {
-        return prgLiking;
-    }
 
-    public void setPrgLiking(boolean prgLiking) {
-        this.prgLiking = prgLiking;
-    }
-
-    public boolean isMyLike() {
-        return myLike;
-    }
-
-    public void setMyLike(boolean myLike) {
-        this.myLike = myLike;
-    }
-
-    public boolean isPrgDeleting() {
-        return prgDeleting;
-    }
-
-    public void setPrgDeleting(boolean prgDeleting) {
-        this.prgDeleting = prgDeleting;
-    }
 
     public String getName() {
         return name;
