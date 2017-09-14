@@ -3,7 +3,7 @@ package com.tameshkim.jamshim.FeedItems;
 public class HomeFeedItem {
 
     private String id, name, time, teams;
-    private boolean prgLiking, myLike,prgDeleting;
+    private boolean prgLiking, myLike, prgDeleting;
 
     public HomeFeedItem() {
     }
@@ -64,3 +64,4 @@ public class HomeFeedItem {
     public void setTeams(String teams) {
         this.teams = teams;
     }
+}
