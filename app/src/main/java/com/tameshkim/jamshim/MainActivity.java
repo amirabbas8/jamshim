@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         tabPeople.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_home, 0, 0);
         tabLayout.getTabAt(0).setCustomView(tabPeople);
         TextView tabMyLife = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
-        tabMyLife.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_home, 0, 0);
+        tabMyLife.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_timeline, 0, 0);
         tabLayout.getTabAt(1).setCustomView(tabMyLife);
 
 

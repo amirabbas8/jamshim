@@ -46,6 +46,13 @@ public class HomeFragment extends Fragment {
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(mAdapter);
+        HomeFeedItem homeFeedItem=new HomeFeedItem();
+        homeFeedItem.setId("1");
+        homeFeedItem.setName("salam");
+        homeFeedItem.setTeams("teams");
+        homeFeedItem.setTime("times");
+        homeList.add(homeFeedItem);
+        mAdapter.notifyDataSetChanged();
         return rootView;
     }
 
