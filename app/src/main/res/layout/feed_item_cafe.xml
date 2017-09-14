@@ -19,18 +19,22 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <TextView
+            android:id="@+id/name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:text="اسم کافه"
-            android:textSize="35sp"
-            android:gravity="center"/>
+            android:textSize="35sp" />
+
         <TextView
+            android:id="@+id/address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:text="آدرس کافه"
-            android:textSize="20sp"
-            android:gravity="center"/>
+            android:textSize="20sp" />
     </LinearLayout>
 </android.support.v7.widget.CardView>
 

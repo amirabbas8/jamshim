@@ -11,7 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.widget.TextView;
 
-import com.tameshkim.jamshim.fragments.HomeFragment;
+import com.tameshkim.jamshim.fragments.CafeFragment;
 import com.tameshkim.jamshim.fragments.TeamFragment;
 
 import java.util.ArrayList;
@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
     private void setupViewPager(final ViewPager viewPager) {
         ViewPagerAdapter adapter;
         adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFrag(new HomeFragment(), "");
+        adapter.addFrag(new CafeFragment(), "");
         adapter.addFrag(new TeamFragment(), "");
         viewPager.setAdapter(adapter);
 

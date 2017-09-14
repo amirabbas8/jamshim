@@ -9,33 +9,32 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.tameshkim.jamshim.FeedItems.HomeFeedItem;
+import com.tameshkim.jamshim.FeedItems.CafeFeedItem;
 import com.tameshkim.jamshim.R;
 
 import java.util.List;
 
 
-public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder> {
+public class CafeAdapter extends RecyclerView.Adapter<CafeAdapter.MyViewHolder> {
 
-    private List<HomeFeedItem> homeList;
+    private List<CafeFeedItem> homeList;
     private Activity activity;
 
     protected class MyViewHolder extends RecyclerView.ViewHolder {
-        private TextView name,date,teams;
+        private TextView name,address;
         private CardView cardView;
         private MyViewHolder(View view) {
             super(view);
             cardView = (CardView) view.findViewById(R.id.card_view);
            name = (TextView) view.findViewById(R.id.name);
-            date = (TextView) view.findViewById(R.id.date);
-            teams = (TextView) view.findViewById(R.id.teams);
+            address = (TextView) view.findViewById(R.id.address);
 
 
         }
     }
 
 
-    public HomeAdapter(Activity activity, List<HomeFeedItem> homeList) {
+    public CafeAdapter(Activity activity, List<CafeFeedItem> homeList) {
         this.activity = activity;
         this.homeList = homeList;
     }
@@ -43,16 +42,15 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder> 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.feed_item_home, parent, false);
+                .inflate(R.layout.feed_item_cafe, parent, false);
         return new MyViewHolder(itemView);
     }
 
     @Override
     public void onBindViewHolder(final MyViewHolder holder, int position) {
-        HomeFeedItem item=homeList.get(position);
+        CafeFeedItem item=homeList.get(position);
         holder.name.setText(item.getName());
-        holder.date.setText(item.getTime());
-        holder.teams.setText(item.getTeams());
+        holder.address.setText(item.getAddress());
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

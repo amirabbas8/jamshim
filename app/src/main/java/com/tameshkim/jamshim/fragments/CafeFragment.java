@@ -9,22 +9,22 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.tameshkim.jamshim.FeedItems.HomeFeedItem;
-import com.tameshkim.jamshim.FeedListAdapters.HomeAdapter;
+import com.tameshkim.jamshim.FeedItems.CafeFeedItem;
+import com.tameshkim.jamshim.FeedListAdapters.CafeAdapter;
 import com.tameshkim.jamshim.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class HomeFragment extends Fragment {
+public class CafeFragment extends Fragment {
 
-    private List<HomeFeedItem> homeList = new ArrayList<>();
-    private HomeAdapter mAdapter;
+    private List<CafeFeedItem> homeList = new ArrayList<>();
+    private CafeAdapter mAdapter;
 
     private RecyclerView recyclerView;
 
-    public HomeFragment() {
+    public CafeFragment() {
         // Required empty public constructor
     }
 
@@ -38,20 +38,19 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        final View rootView = inflater.inflate(R.layout.fragment_home, container, false);
+        final View rootView = inflater.inflate(R.layout.fragment_cafe, container, false);
         recyclerView=(RecyclerView)rootView.findViewById(R.id.recycler_view);
-        mAdapter = new HomeAdapter(this.getActivity(),homeList);
+        mAdapter = new CafeAdapter(this.getActivity(),homeList);
         recyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(rootView.getContext());
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(mAdapter);
-        HomeFeedItem homeFeedItem=new HomeFeedItem();
-        homeFeedItem.setId("1");
-        homeFeedItem.setName("salam");
-        homeFeedItem.setTeams("teams");
-        homeFeedItem.setTime("times");
-        homeList.add(homeFeedItem);
+        CafeFeedItem cafeFeedItem =new CafeFeedItem();
+        cafeFeedItem.setId("1");
+        cafeFeedItem.setName("salam");
+        cafeFeedItem.setAddress("address");
+        homeList.add(cafeFeedItem);
         mAdapter.notifyDataSetChanged();
         return rootView;
     }

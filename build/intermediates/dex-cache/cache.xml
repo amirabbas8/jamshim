@@ -16,7 +16,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="3034c01c9dfd3636ddbf8038539ac0fcd87e645b">
+        sha1="61183e52bf9912580c7480b97d1cf83f75639a5d">
         <dex dex="/home/amirabbas/jamshim/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_1a5dcf125512f62092f5f97975ffdf85f9d9200b/classes.dex" />
     </item>
 

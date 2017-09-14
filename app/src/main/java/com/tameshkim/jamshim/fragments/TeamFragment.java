@@ -8,9 +8,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
-import com.tameshkim.jamshim.FeedItems.HomeFeedItem;
-import com.tameshkim.jamshim.FeedListAdapters.HomeAdapter;
+import com.tameshkim.jamshim.FeedItems.TeamFeedItem;
+import com.tameshkim.jamshim.FeedListAdapters.TeamAdapter;
 import com.tameshkim.jamshim.R;
 
 import java.util.ArrayList;
@@ -19,8 +21,8 @@ import java.util.List;
 
 public class TeamFragment extends Fragment {
 
-    private List<HomeFeedItem> homeList = new ArrayList<>();
-    private HomeAdapter mAdapter;
+    private List<TeamFeedItem> feedList = new ArrayList<>();
+    private TeamAdapter mAdapter;
 
     private RecyclerView recyclerView;
 
@@ -40,12 +42,28 @@ public class TeamFragment extends Fragment {
         super.onCreate(savedInstanceState);
         final View rootView = inflater.inflate(R.layout.fragment_team, container, false);
         recyclerView=(RecyclerView)rootView.findViewById(R.id.recycler_view);
-        mAdapter = new HomeAdapter(this.getActivity(),homeList);
+        mAdapter = new TeamAdapter(this.getActivity(),feedList);
         recyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(rootView.getContext());
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(mAdapter);
+        TeamFeedItem cafeFeedItem =new TeamFeedItem();
+        cafeFeedItem.setId("1");
+        cafeFeedItem.setTeams("est:pir");
+        feedList.add(cafeFeedItem);
+        mAdapter.notifyDataSetChanged();
+
+
+
+        Spinner spinner = (Spinner) rootView.findViewById(R.id.spinner);
+        String[] arrayStrings=new String[]{"خدمت اصلی","خدمت دوم","خدمت سوم"};
+        ArrayAdapter adapter=new ArrayAdapter<>(this.getContext(),R.layout.spiner_item,arrayStrings);
+        spinner.setAdapter(adapter);
+        Spinner spinner2 = (Spinner) rootView.findViewById(R.id.spinner2);
+        String[] arrayStrings2=new String[]{"خدمت اصلی","خدمت دوم","خدمت سوم"};
+        ArrayAdapter<String> adapter2=new ArrayAdapter<>(this.getContext(),R.layout.spiner_item,arrayStrings2);
+        spinner2.setAdapter(adapter2);
         return rootView;
     }
 

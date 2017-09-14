@@ -1,13 +1,16 @@
 package com.tameshkim.jamshim.FeedListAdapters;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.tameshkim.jamshim.FeedItems.HomeFeedItem;
+import com.tameshkim.jamshim.CafeActivity;
+import com.tameshkim.jamshim.FeedItems.TeamFeedItem;
 import com.tameshkim.jamshim.R;
 
 import java.util.List;
@@ -15,24 +18,26 @@ import java.util.List;
 
 public class TeamAdapter extends RecyclerView.Adapter<TeamAdapter.MyViewHolder> {
 
-    private List<HomeFeedItem> homeList;
+    private List<TeamFeedItem> teamList;
     private Activity activity;
 
     protected class MyViewHolder extends RecyclerView.ViewHolder {
-        private TextView txtName;
+        private TextView teams;
+        private CardView cardView;
 
         private MyViewHolder(View view) {
             super(view);
-//            txtName = (TextView) view.findViewById(R.id.txt_name);
+     teams = (TextView) view.findViewById(R.id.teams);
+            cardView = (CardView) view.findViewById(R.id.card_view);
 
 
         }
     }
 
 
-    public TeamAdapter(Activity activity, List<HomeFeedItem> homeList) {
+    public TeamAdapter(Activity activity, List<TeamFeedItem> teamList) {
         this.activity = activity;
-        this.homeList = homeList;
+        this.teamList = teamList;
     }
 
     @Override
@@ -43,10 +48,19 @@ public class TeamAdapter extends RecyclerView.Adapter<TeamAdapter.MyViewHolder> 
     }
 
     @Override
-    public void onBindViewHolder(final MyViewHolder holder, int position) {}
+    public void onBindViewHolder(final MyViewHolder holder, int position) {
+        TeamFeedItem item=teamList.get(position);
+        holder.teams.setText(item.getTeams());
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                activity.startActivity(new Intent(activity, CafeActivity.class));
+            }
+        });
+    }
     @Override
     public int getItemCount() {
-        return homeList.size();
+        return teamList.size();
     }
 
 
