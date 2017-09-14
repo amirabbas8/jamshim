@@ -8,5 +8,5 @@
 /captures
 .externalNativeBuild
 /gradle
-/app
-!/app/src
+!/app/src/*
+app/build
