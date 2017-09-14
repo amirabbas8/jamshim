@@ -2,7 +2,7 @@ package com.tameshkim.jamshim.FeedItems;
 
 public class HomeFeedItem {
 
-    private String id, name, userId, profilePic, image,video, timeStamp, text, nLike,location, videoThumb;
+    private String id, name, time, teams;
     private boolean prgLiking, myLike,prgDeleting;
 
     public HomeFeedItem() {
@@ -13,85 +13,16 @@ public class HomeFeedItem {
         return id;
     }
 
-
     public void setId(String id) {
         this.id = id;
-    }
-
-
-    public String getUserId() {
-        return userId;
-    }
-
-
-    public void setUserId(String userid) {
-        this.userId = userid;
-    }
-
-
-    public String getName() {
-        return name;
-    }
-
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-
-    public String getProfilePic() {
-        return profilePic;
-    }
-
-
-    public void setProfilePic(String profilePic) {
-        this.profilePic = profilePic;
-    }
-
-
-    public String getimage() {
-        return image;
-    }
-
-
-    public void setimage(String image) {
-        this.image = image;
-    }
-
-    public String getTimeStamp() {
-        return timeStamp;
-    }
-
-
-    public void setTimeStamp(String timeStamp) {
-        this.timeStamp = timeStamp;
     }
 
     public boolean getPrgLiking() {
         return prgLiking;
     }
 
-
     public void setPrgLiking(boolean prgLiking) {
         this.prgLiking = prgLiking;
-    }
-
-
-
-    public String getText() {
-        return text;
-    }
-
-    public void setText(String text) {
-        this.text = text;
-    }
-
-    public String getNLike() {
-        return nLike;
-    }
-
-    public void setNLike(String nLike) {
-        this.nLike = nLike;
     }
 
     public boolean isMyLike() {
@@ -110,27 +41,26 @@ public class HomeFeedItem {
         this.prgDeleting = prgDeleting;
     }
 
-    public String getLocation() {
-        return location;
+    public String getName() {
+        return name;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getVideo() {
-        return video;
+    public String getTime() {
+        return time;
     }
 
-    public void setVideo(String video) {
-        this.video = video;
+    public void setTime(String time) {
+        this.time = time;
     }
 
-    public String getVideoThumb() {
-        return videoThumb;
+    public String getTeams() {
+        return teams;
     }
 
-    public void setVideoThumb(String videoThumb) {
-        this.videoThumb = videoThumb;
+    public void setTeams(String teams) {
+        this.teams = teams;
     }
-}
