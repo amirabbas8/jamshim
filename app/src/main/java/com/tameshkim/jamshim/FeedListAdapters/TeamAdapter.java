@@ -49,13 +49,13 @@ public class TeamAdapter extends RecyclerView.Adapter<TeamAdapter.MyViewHolder> 
 
     @Override
     public void onBindViewHolder(final MyViewHolder holder, int position) {
-        TeamFeedItem item=teamList.get(position);
+        final TeamFeedItem item=teamList.get(position);
         holder.teams.setText(item.getTeams());
         holder.cardView.setBackground(activity.getDrawable(item.getDrawable()));
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                activity.startActivity(new Intent(activity, EventActivity.class));
+                activity.startActivity(new Intent(activity, EventActivity.class).putExtra("teams",item.getTeams()));
             }
         });
     }
