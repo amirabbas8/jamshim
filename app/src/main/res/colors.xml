@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#009688</color>
-    <color name="colorPrimaryDark">#00796B</color>
+    <color name="colorPrimary">#455a64</color>
+    <color name="colorPrimaryDark">#1c313a</color>
     <color name="textColorPrimary">#212121</color>
     <color name="windowBackground">#0a000000</color>
     <color name="navigationBarColor">#009688</color>
@@ -16,7 +16,7 @@
     <color name="aluminum">#999999</color>
     <color name="base">#AAAAAA</color>
     <color name="iron">#CCCCCC</color>
-    <color name="white">#c4ffffff</color>
+    <color name="white">#FFFFFF</color>
 
     <color name="blueStart">#4EFFF3</color>
     <color name="blueEnd">#0ca6f9</color>
@@ -29,6 +29,6 @@
 
     <color name="spinner_background">#FF5722</color>
 
-    <color name="text_view_background">#47cccccc</color>
+    <color name="text_view_background">#49cccccc</color>
 
 </resources>
