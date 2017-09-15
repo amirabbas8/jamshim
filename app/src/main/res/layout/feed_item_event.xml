@@ -19,6 +19,7 @@
         android:id="@+id/feed_item"
         android:layout_width="match_parent"
         android:orientation="horizontal"
+        android:layout_margin="40dp"
         android:layout_height="90dp">
         <LinearLayout
             android:layout_weight="1"

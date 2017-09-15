@@ -37,18 +37,18 @@ public class MainActivity extends AppCompatActivity {
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
         setupTabIcons();
+
     }
 
 
     private void setupTabIcons() {
 
         TextView tabPeople = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
-        tabPeople.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_home, 0, 0);
+        tabPeople.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.cafee, 0, 0);
         tabLayout.getTabAt(0).setCustomView(tabPeople);
         TextView tabMyLife = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
-        tabMyLife.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_timeline, 0, 0);
+        tabMyLife.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.sport_2, 0, 0);
         tabLayout.getTabAt(1).setCustomView(tabMyLife);
-
 
     }
 
@@ -96,9 +96,4 @@ public class MainActivity extends AppCompatActivity {
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
     }
-
-
-
-
-
 }
