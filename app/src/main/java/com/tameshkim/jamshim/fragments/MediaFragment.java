@@ -46,10 +46,13 @@ public class MediaFragment extends Fragment {
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(mAdapter);
-        feedList.add(new MediaFeedItem("پرپولیس  -  الاهلی" , " صحنه ویژه" , R.drawable.stadium_4,
-                                          "کافه بالسا" , " ویژه" , R.drawable.coffeeshop_3,
-                                        "حاشیه " , "ویژه" , R.drawable.coffeeshop_4));
-        mAdapter.notifyDataSetChanged();
+        if(feedList.size()==0){
+            feedList.add(new MediaFeedItem("پرپولیس  -  الاهلی" , " صحنه ویژه" , R.drawable.stadium_4,
+                    "کافه بالسا" , " ویژه" , R.drawable.coffeeshop_3,
+                    "حاشیه " , "ویژه" , R.drawable.coffeeshop_4));
+            mAdapter.notifyDataSetChanged();
+        }
+
 
         return rootView;
     }
