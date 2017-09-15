@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
@@ -41,34 +42,92 @@ public class TeamFragment extends Fragment {
                              Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         final View rootView = inflater.inflate(R.layout.fragment_team, container, false);
-        recyclerView=(RecyclerView)rootView.findViewById(R.id.recycler_view);
-        mAdapter = new TeamAdapter(this.getActivity(),feedList);
+        recyclerView = (RecyclerView) rootView.findViewById(R.id.recycler_view);
+        mAdapter = new TeamAdapter(this.getActivity(), feedList);
         recyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(rootView.getContext());
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(mAdapter);
-        feedList.add(new TeamFeedItem("1","استقلال - پرسپولیس" , R.drawable.stadium_1));
-        feedList.add(new TeamFeedItem("2","ذوب آهن - سپاهان" , R.drawable.stadium_3));
-        feedList.add(new TeamFeedItem("3","تراکتور سازی - سیاه جامگان", R.drawable.stadium_1));
-        feedList.add(new TeamFeedItem("4","مس کرمان- استقلال خوزستان" , R.drawable.stadium_3 ));
-        feedList.add(new TeamFeedItem("5","تربیت یزد - صنعت نفت" , R.drawable.stadium_1));
-        feedList.add(new TeamFeedItem("6","بورنموث - برایتون" , R.drawable.stadium_3));
-        feedList.add(new TeamFeedItem("7","لیورپول - برنلی" , R.drawable.stadium_1));
-        feedList.add(new TeamFeedItem("8","هانوفر - هامبورگ" , R.drawable.stadium_3));
-        feedList.add(new TeamFeedItem("9","رئال سوسیاد - رئال مادرید" , R.drawable.stadium_1));
-        feedList.add(new TeamFeedItem("10","خیرونیا - سویا" , R.drawable.stadium_3 ));
+        feedList.add(new TeamFeedItem("1", "استقلال - پرسپولیس", R.drawable.stadium_1));
+        feedList.add(new TeamFeedItem("2", "ذوب آهن - سپاهان", R.drawable.stadium_3));
+        feedList.add(new TeamFeedItem("3", "تراکتور سازی - سیاه جامگان", R.drawable.stadium_1));
+        feedList.add(new TeamFeedItem("4", "مس کرمان- استقلال خوزستان", R.drawable.stadium_3));
+        feedList.add(new TeamFeedItem("5", "تربیت یزد - صنعت نفت", R.drawable.stadium_1));
+        feedList.add(new TeamFeedItem("6", "بورنموث - برایتون", R.drawable.stadium_3));
+        feedList.add(new TeamFeedItem("7", "لیورپول - برنلی", R.drawable.stadium_1));
+        feedList.add(new TeamFeedItem("8", "هانوفر - هامبورگ", R.drawable.stadium_3));
+        feedList.add(new TeamFeedItem("9", "رئال سوسیاد - رئال مادرید", R.drawable.stadium_1));
+        feedList.add(new TeamFeedItem("10", "خیرونیا - سویا", R.drawable.stadium_3));
         mAdapter.notifyDataSetChanged();
 
-
         Spinner spinner = (Spinner) rootView.findViewById(R.id.spinner);
-        String[] arrayStrings=new String[]{"فوتبال"};
-        ArrayAdapter adapter=new ArrayAdapter<>(this.getContext(),R.layout.spiner_item,arrayStrings);
+        String[] arrayStrings = new String[]{"فوتبال"};
+        ArrayAdapter adapter = new ArrayAdapter<>(this.getContext(), R.layout.spiner_item, arrayStrings);
         spinner.setAdapter(adapter);
         Spinner spinner2 = (Spinner) rootView.findViewById(R.id.spinner2);
-        String[] arrayStrings2=new String[]{"جام خلیج فارس","لیگ برتر انگلیس","لالیگا اسپانیا","بوندسلیگا آلمان"};
-        ArrayAdapter<String> adapter2=new ArrayAdapter<>(this.getContext(),R.layout.spiner_item,arrayStrings2);
+        String[] arrayStrings2 = new String[]{"همه", "جام خلیج فارس", "لیگ برتر انگلیس", "لالیگا اسپانیا", "بوندسلیگا آلمان"};
+        ArrayAdapter<String> adapter2 = new ArrayAdapter<>(this.getContext(), R.layout.spiner_item, arrayStrings2);
         spinner2.setAdapter(adapter2);
+        spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                // your code here
+             switch (position) {
+                    case 0:
+                        feedList.clear();
+                        feedList.add(new TeamFeedItem("1", "استقلال - پرسپولیس", R.drawable.stadium_1));
+                        feedList.add(new TeamFeedItem("2", "ذوب آهن - سپاهان", R.drawable.stadium_3));
+                        feedList.add(new TeamFeedItem("3", "تراکتور سازی - سیاه جامگان", R.drawable.stadium_1));
+                        feedList.add(new TeamFeedItem("4", "مس کرمان- استقلال خوزستان", R.drawable.stadium_3));
+                        feedList.add(new TeamFeedItem("5", "تربیت یزد - صنعت نفت", R.drawable.stadium_1));
+                        feedList.add(new TeamFeedItem("6", "بورنموث - برایتون", R.drawable.stadium_3));
+                        feedList.add(new TeamFeedItem("7", "لیورپول - برنلی", R.drawable.stadium_1));
+                        feedList.add(new TeamFeedItem("8", "هانوفر - هامبورگ", R.drawable.stadium_3));
+                        feedList.add(new TeamFeedItem("9", "رئال سوسیاد - رئال مادرید", R.drawable.stadium_1));
+                        feedList.add(new TeamFeedItem("10", "خیرونیا - سویا", R.drawable.stadium_3));
+                        mAdapter.notifyDataSetChanged();
+                        break;
+                    case 1:
+                        feedList.clear();
+                        feedList.add(new TeamFeedItem("1", "استقلال - پرسپولیس", R.drawable.stadium_1));
+                        feedList.add(new TeamFeedItem("2", "ذوب آهن - سپاهان", R.drawable.stadium_3));
+                        feedList.add(new TeamFeedItem("3", "تراکتور سازی - سیاه جامگان", R.drawable.stadium_1));
+                        feedList.add(new TeamFeedItem("4", "مس کرمان- استقلال خوزستان", R.drawable.stadium_3));
+                        feedList.add(new TeamFeedItem("5", "تربیت یزد - صنعت نفت", R.drawable.stadium_1));
+                        mAdapter.notifyDataSetChanged();
+                        break;
+                    case 2:
+                        feedList.clear();
+
+                        feedList.add(new TeamFeedItem("6", "بورنموث - برایتون", R.drawable.stadium_3));
+                        feedList.add(new TeamFeedItem("7", "لیورپول - برنلی", R.drawable.stadium_1));
+                        mAdapter.notifyDataSetChanged();
+                        break;
+                    case 3:
+                        feedList.clear();
+
+                        feedList.add(new TeamFeedItem("9", "رئال سوسیاد - رئال مادرید", R.drawable.stadium_1));
+                        feedList.add(new TeamFeedItem("10", "خیرونیا - سویا", R.drawable.stadium_3));
+                        mAdapter.notifyDataSetChanged();
+                        break;
+                    case 4:
+                        feedList.clear();
+                        feedList.add(new TeamFeedItem("8", "هانوفر - هامبورگ", R.drawable.stadium_3));
+                        mAdapter.notifyDataSetChanged();
+                        break;
+                }
+            }
+
+
+        @Override
+        public void onNothingSelected(AdapterView<?> parentView) {
+            // your code here
+        }
+
+    });
+
+
         return rootView;
     }
 
