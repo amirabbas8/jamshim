@@ -7,7 +7,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -27,6 +31,9 @@ public class LoginActivity extends AppCompatActivity {
         usernameText = (EditText) findViewById(R.id.input_username);
         passwordText = (EditText) findViewById(R.id.input_password);
         loginButton = (Button) findViewById(R.id.btn_login);
+
+        ImageView icon = (ImageView) findViewById(R.id.icon);
+        YoYo.with(Techniques.RotateInDownLeft).duration(2000).repeat(0).playOn(icon);
         TextView signUpLink = (TextView) findViewById(R.id.link_signup);
 
         usernameText.requestFocus();
