@@ -16,6 +16,7 @@
     app:cardBackgroundColor="#FFFFFF"
     card_view:cardCornerRadius="4dp">
     <LinearLayout
+
         android:id="@+id/feed_item"
         android:layout_width="match_parent"
         android:orientation="horizontal"
