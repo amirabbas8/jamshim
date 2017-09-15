@@ -34,4 +34,7 @@ public class TeamFeedItem {
     public @DrawableRes int getDrawable(){
         return drawable;
     }
+
+    public void setDrawable(int drawable){ this.drawable = drawable;}
+
 }

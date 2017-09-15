@@ -16,6 +16,7 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.tameshkim.jamshim.fragments.CafeFragment;
+import com.tameshkim.jamshim.fragments.MediaFragment;
 import com.tameshkim.jamshim.fragments.TeamFragment;
 
 import java.util.ArrayList;
@@ -47,12 +48,19 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupTabIcons() {
 
-        TextView tabPeople = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
-        tabPeople.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.cafee, 0, 0);
-        tabLayout.getTabAt(0).setCustomView(tabPeople);
-        TextView tabMyLife = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
-        tabMyLife.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.sport_2, 0, 0);
-        tabLayout.getTabAt(1).setCustomView(tabMyLife);
+        TextView tabCoffee = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
+        tabCoffee.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.cafee, 0, 0);
+        tabLayout.getTabAt(0).setCustomView(tabCoffee);
+
+
+        TextView tabSport = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
+        tabSport.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.sport_2, 0, 0);
+        tabLayout.getTabAt(1).setCustomView(tabSport);
+
+
+        TextView tabMedia = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
+        tabMedia.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_home, 0, 0);
+        tabLayout.getTabAt(2).setCustomView(tabMedia);
 
     }
 
@@ -62,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
         adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFrag(new CafeFragment(), "");
         adapter.addFrag(new TeamFragment(), "");
+        adapter.addFrag(new MediaFragment(), "");
         viewPager.setAdapter(adapter);
 
     }
