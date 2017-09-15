@@ -23,11 +23,7 @@ public class LoginActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        boolean isLogged = PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getBoolean("isLogged", false);
-        if (isLogged) {
-            startActivity(new Intent(this, MainActivity.class));
-            finish();
-        }
+
         usernameText = (EditText) findViewById(R.id.input_username);
         passwordText = (EditText) findViewById(R.id.input_password);
         loginButton = (Button) findViewById(R.id.btn_login);
