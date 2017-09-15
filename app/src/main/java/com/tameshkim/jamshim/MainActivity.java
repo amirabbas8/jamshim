@@ -17,6 +17,7 @@ import android.widget.TextView;
 
 import com.tameshkim.jamshim.fragments.CafeFragment;
 import com.tameshkim.jamshim.fragments.MediaFragment;
+import com.tameshkim.jamshim.fragments.RecommendFragment;
 import com.tameshkim.jamshim.fragments.TeamFragment;
 
 import java.util.ArrayList;
@@ -62,6 +63,10 @@ public class MainActivity extends AppCompatActivity {
         tabMedia.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_home, 0, 0);
         tabLayout.getTabAt(2).setCustomView(tabMedia);
 
+        TextView tabRecomm = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
+        tabRecomm.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_favorite, 0, 0);
+        tabLayout.getTabAt(3).setCustomView(tabRecomm);
+
     }
 
 
@@ -71,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
         adapter.addFrag(new CafeFragment(), "");
         adapter.addFrag(new TeamFragment(), "");
         adapter.addFrag(new MediaFragment(), "");
+        adapter.addFrag(new RecommendFragment(), "");
         viewPager.setAdapter(adapter);
 
     }

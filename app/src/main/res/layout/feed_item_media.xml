@@ -9,16 +9,15 @@
         android:id="@+id/card_view_media_1"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_margin="5dp"
         android:layout_weight="2"
+        android:layout_margin="5dp"
         app:cardBackgroundColor="#ff0000">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="25dp"
+            android:padding="25dp"
+            android:background="#645f5f23"
             android:orientation="vertical">
-
             <TextView
                 android:id="@+id/title_cardview1"
                 android:layout_width="match_parent"
@@ -26,7 +25,6 @@
                 android:text="اسم کافه"
                 android:textColor="@color/white"
                 android:textSize="25sp" />
-
             <TextView
                 android:id="@+id/desc_cardview1"
                 android:layout_width="match_parent"
@@ -51,10 +49,11 @@
             app:cardBackgroundColor="#0000ff"
             android:layout_margin="5dp">
             <LinearLayout
+                android:background="#645f5f23"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_margin="50dp"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent"
+                android:padding="20dp">
 
                 <TextView
                     android:id="@+id/title_cardview2"
@@ -83,10 +82,11 @@
             app:cardBackgroundColor="#0000ff"
             android:layout_margin="5dp">
             <LinearLayout
+                android:background="#645f5f23"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_margin="50dp"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent"
+                android:padding="20dp">
 
                 <TextView
                     android:id="@+id/title_cardview3"
