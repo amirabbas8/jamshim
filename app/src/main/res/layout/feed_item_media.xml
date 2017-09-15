@@ -3,41 +3,41 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="450dp">
 
     <android.support.v7.widget.CardView
         android:id="@+id/card_view_media_1"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
         android:layout_weight="2"
         app:cardBackgroundColor="#ff0000">
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_margin="50dp"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_margin="25dp"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/title_cardview1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="right"
-                android:textColor="@color/white"
+                android:layout_height="wrap_content"
                 android:text="اسم کافه"
+                android:textColor="@color/white"
                 android:textSize="25sp" />
 
             <TextView
                 android:id="@+id/desc_cardview1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="right"
+                android:layout_height="wrap_content"
                 android:text="آدرس کافه"
                 android:textColor="@color/white"
                 android:textSize="15sp" />
         </LinearLayout>
 
     </android.support.v7.widget.CardView>
+
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -47,10 +47,9 @@
             android:id="@+id/card_view_media_2"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="300dp"
-            app:cardBackgroundColor="#00ff00">
-
-
+            android:layout_height="match_parent"
+            app:cardBackgroundColor="#0000ff"
+            android:layout_margin="5dp">
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
@@ -75,16 +74,14 @@
                     android:textColor="@color/white"
                     android:textSize="10sp" />
             </LinearLayout>
-
-
         </android.support.v7.widget.CardView>
         <android.support.v7.widget.CardView
             android:id="@+id/card_view_media_3"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="300dp"
-            app:cardBackgroundColor="#0000ff">
-
+            android:layout_height="match_parent"
+            app:cardBackgroundColor="#0000ff"
+            android:layout_margin="5dp">
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
@@ -109,8 +106,6 @@
                     android:textColor="@color/white"
                     android:textSize="10sp" />
             </LinearLayout>
-
-
         </android.support.v7.widget.CardView>
     </LinearLayout>
 </LinearLayout>
