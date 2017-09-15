@@ -47,11 +47,11 @@ public class CafeFragment extends Fragment {
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(mAdapter);
         if(homeList.size()==0){
-            homeList.add(new CafeFeedItem("1","کافه زاگرس","تهران" , R.drawable.coffee_2));
-            homeList.add(new CafeFeedItem("2","کافه سفید","یزد" ,   R.drawable.coffee_3));
-            homeList.add(new CafeFeedItem("3","کافه هرمس","اصفهان"   , R.drawable.coffee_2));
-            homeList.add(new CafeFeedItem("4","کافه بالسا","تبریز"   , R.drawable.coffee_2));
-            homeList.add(new CafeFeedItem("5","کافه لژان","کرمان"   , R.drawable.coffee_3));
+            homeList.add(new CafeFeedItem("1","کافه زاگرس","تهران" , R.drawable.coffeeshop_1));
+            homeList.add(new CafeFeedItem("2","کافه سفید","یزد" ,   R.drawable.coffeeshop_2));
+            homeList.add(new CafeFeedItem("3","کافه هرمس","اصفهان"   , R.drawable.coffeeshop_5));
+            homeList.add(new CafeFeedItem("4","کافه بالسا","تبریز"   , R.drawable.coffeeshop_6));
+            homeList.add(new CafeFeedItem("5","کافه نوژان","کرمان"   , R.drawable.coffeeshop_7));
             mAdapter.notifyDataSetChanged();
         }
 
