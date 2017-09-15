@@ -73,11 +73,8 @@ public class MainActivity extends AppCompatActivity {
         adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFrag(new CafeFragment(), "");
         adapter.addFrag(new MediaFragment(), "");
-<<<<<<< HEAD
-        adapter.addFrag(new RecommendFragment(), "");
-=======
         adapter.addFrag(new TeamFragment(), "");
->>>>>>> a1bf1f03c71e01d449aff6a41b94780d2aee1f91
+        adapter.addFrag(new RecommendFragment(), "");
         viewPager.setAdapter(adapter);
 
     }
