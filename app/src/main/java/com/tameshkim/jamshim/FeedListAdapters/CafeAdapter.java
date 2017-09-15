@@ -52,6 +52,7 @@ public class CafeAdapter extends RecyclerView.Adapter<CafeAdapter.MyViewHolder> 
         final CafeFeedItem item=homeList.get(position);
         holder.name.setText(item.getName());
         holder.address.setText(item.getAddress());
+        holder.cardView.setBackground(activity.getDrawable(item.getDrawable()));
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

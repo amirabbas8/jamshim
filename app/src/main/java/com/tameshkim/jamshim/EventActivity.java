@@ -11,7 +11,6 @@ import com.tameshkim.jamshim.FeedListAdapters.EventAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class EventActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
@@ -21,7 +20,7 @@ public class EventActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event);
-        String name=getIntent().getExtras().getString("name");
+//        String name=getIntent().getExtras().getString("name");
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         mAdapter = new EventAdapter(this, eventList);
         recyclerView.setHasFixedSize(true);
@@ -40,11 +39,11 @@ public class EventActivity extends AppCompatActivity {
         eventList.add(new EventFeedItem("8","کافه بالسا","هانوفر - هامبورگ","تبریز"));
         eventList.add(new EventFeedItem("9","کافه لژان","رءال سوسیاد - رءال مادرید","کرمان"));
         eventList.add(new EventFeedItem("10","کافه سفید","خیرونیا - سویا","یزد"));
-        for(EventFeedItem e:eventList){
-            if(!Objects.equals(e.getName(), name)){
-//              eventList.remove(e);
-            }
-        }
+//        for(EventFeedItem e:eventList){
+//            if(!Objects.equals(e.getName(), name)){
+////              eventList.remove(e);
+//            }
+//        }
 
         mAdapter.notifyDataSetChanged();
     }
