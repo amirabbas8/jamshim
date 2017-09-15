@@ -3,7 +3,7 @@ package com.tameshkim.jamshim.fragments;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -42,7 +42,7 @@ public class CafeFragment extends Fragment {
         recyclerView=(RecyclerView)rootView.findViewById(R.id.recycler_view);
         mAdapter = new CafeAdapter(this.getActivity(),homeList);
         recyclerView.setHasFixedSize(true);
-        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(rootView.getContext());
+        RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(rootView.getContext(),2);
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(mAdapter);

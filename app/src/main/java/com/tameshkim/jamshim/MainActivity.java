@@ -1,7 +1,9 @@
 package com.tameshkim.jamshim;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -9,6 +11,8 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.tameshkim.jamshim.fragments.CafeFragment;
@@ -91,7 +95,24 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+
+        if (id == R.id.action_logout) {
+            PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit().putBoolean("isLogged", false  ).apply();
+            startActivity(new Intent(this, LoginActivity.class));
+            finish();
+        }
+    return true;
+    }
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
