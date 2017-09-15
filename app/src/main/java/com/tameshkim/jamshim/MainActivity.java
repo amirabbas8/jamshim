@@ -62,7 +62,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
     private void setupViewPager(final ViewPager viewPager) {
         ViewPagerAdapter adapter;
         adapter = new ViewPagerAdapter(getSupportFragmentManager());
@@ -70,7 +69,6 @@ public class MainActivity extends AppCompatActivity {
         adapter.addFrag(new MediaFragment(), "");
         adapter.addFrag(new TeamFragment(), "");
         viewPager.setAdapter(adapter);
-
     }
 
     private class ViewPagerAdapter extends FragmentPagerAdapter {
