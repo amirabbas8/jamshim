@@ -28,8 +28,6 @@ public class MediaFragment extends Fragment {
     private RecyclerView recyclerView;
 
 
-    private View rootView;
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +38,7 @@ public class MediaFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        rootView = inflater.inflate(R.layout.fragment_media, container, false);
+        final View rootView = inflater.inflate(R.layout.fragment_media, container, false);
         recyclerView=(RecyclerView)rootView.findViewById(R.id.recycler_view_media);
         mAdapter = new MediaAdapter(this.getActivity(),feedList);
         recyclerView.setHasFixedSize(true);
@@ -54,8 +52,6 @@ public class MediaFragment extends Fragment {
                     "حاشیه " , "ویژه" , R.drawable.coffeeshop_4));
             mAdapter.notifyDataSetChanged();
         }
-
         return rootView;
     }
-
 }
