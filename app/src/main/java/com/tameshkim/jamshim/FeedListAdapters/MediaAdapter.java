@@ -5,6 +5,7 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +18,8 @@ import com.tameshkim.jamshim.FeedItems.MediaFeedItem;
 import com.tameshkim.jamshim.R;
 
 import java.util.List;
+
+import static android.content.ContentValues.TAG;
 
 /**
  * Created by amirh on 15/09/17.
@@ -130,6 +133,13 @@ public class MediaAdapter extends RecyclerView.Adapter<MediaAdapter.MyViewHolder
 
             }
         });
+    }
+
+    public void setVideoPause(){
+
+        if (video != null)
+            video.pause();
+
     }
 
     @Override

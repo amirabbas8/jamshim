@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +16,8 @@ import com.tameshkim.jamshim.R;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static android.content.ContentValues.TAG;
 
 /**
  * Created by amirh on 15/09/17.
@@ -27,6 +30,12 @@ public class MediaFragment extends Fragment {
 
     private RecyclerView recyclerView;
 
+    @Override
+    public void onPause() {
+        super.onPause();
+        mAdapter.setVideoPause();
+        Log.d(TAG , "on pauseeeeeeee :: " );
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
