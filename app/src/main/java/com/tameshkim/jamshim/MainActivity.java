@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
         setupViewPager(viewPager);
-        viewPager.setCurrentItem(0);
+        viewPager.setCurrentItem(1);
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
         setupTabIcons();
@@ -53,15 +53,13 @@ public class MainActivity extends AppCompatActivity {
         tabCoffee.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.cafee, 0, 0);
         tabLayout.getTabAt(0).setCustomView(tabCoffee);
 
+        TextView tabMedia = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
+        tabMedia.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_home, 0, 0);
+        tabLayout.getTabAt(1).setCustomView(tabMedia);
 
         TextView tabSport = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
         tabSport.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.sport_2, 0, 0);
-        tabLayout.getTabAt(1).setCustomView(tabSport);
-
-
-        TextView tabMedia = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
-        tabMedia.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_home, 0, 0);
-        tabLayout.getTabAt(2).setCustomView(tabMedia);
+        tabLayout.getTabAt(2).setCustomView(tabSport);
 
         TextView tabRecomm = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
         tabRecomm.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_favorite, 0, 0);
@@ -74,9 +72,12 @@ public class MainActivity extends AppCompatActivity {
         ViewPagerAdapter adapter;
         adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFrag(new CafeFragment(), "");
-        adapter.addFrag(new TeamFragment(), "");
         adapter.addFrag(new MediaFragment(), "");
+<<<<<<< HEAD
         adapter.addFrag(new RecommendFragment(), "");
+=======
+        adapter.addFrag(new TeamFragment(), "");
+>>>>>>> a1bf1f03c71e01d449aff6a41b94780d2aee1f91
         viewPager.setAdapter(adapter);
 
     }

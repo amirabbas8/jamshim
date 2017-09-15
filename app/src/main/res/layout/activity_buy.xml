@@ -1,100 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:card_view="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:background="@drawable/bg_gra">
+
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        app:cardBackgroundColor="#FFFFFF"
-        card_view:cardCornerRadius="4dp"
-        tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="8dp">
-        <LinearLayout
+        app:cardCornerRadius="10dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            tools:layout_editor_absoluteY="0dp"
-            tools:layout_editor_absoluteX="8dp">
-            <TextView
-                android:paddingTop="19dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="مکان"
-                android:textSize="20sp"
-                android:layout_gravity="center"
-                android:gravity="center"/>
+            android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/name"
+            <LinearLayout
+                android:id="@+id/liner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:paddingTop="19dp"
-                android:text="کافه ترانزیت"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
-            <TextView
-                android:paddingTop="19dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="زمان"
-                android:textSize="20sp"
-                android:layout_gravity="center"
-                android:gravity="center"/>
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/date"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:paddingTop="19dp"
-                android:text="1396/06/23 20:30"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
-            <TextView
-                android:paddingTop="19dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="بازی"
-                android:textSize="20sp"
-                android:layout_gravity="center"
-                android:gravity="center"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:paddingTop="19dp"
+                    android:text="مکان"
+                    android:textSize="20sp" />
 
-            <TextView
-                android:id="@+id/teams"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:paddingTop="19dp"
-                android:text="تیم اول : تیم دوم"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingTop="19dp"
+                    android:text="کافه ترانزیت"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-            <EditText
-                android:id="@+id/count"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:inputType="number"
-                android:hint="تعداد بلیط"
-                android:paddingTop="19dp"
-                android:textSize="30sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingTop="19dp"
+                    android:text="زمان"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingTop="19dp"
+                    android:text="1396/06/23 20:30"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingTop="19dp"
+                    android:text="بازی"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/teams"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingTop="19dp"
+                    android:text="تیم اول : تیم دوم"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+                <EditText
+                    android:id="@+id/count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="40dp"
+                    android:gravity="center"
+                    android:hint="تعداد بلیط"
+                    android:inputType="number"
+                    android:paddingTop="19dp"
+                    android:textSize="30sp" />
+
+
+            </LinearLayout>
 
             <Button
                 android:id="@+id/buy_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/liner"
                 android:text="خرید"
+                android:textColor="@color/white"
                 android:textSize="25sp"
-                android:layout_margin="5dp"
-                android:layout_gravity="center"
-                android:background="@color/colorPrimaryDark"/>
-        </LinearLayout>
+                android:background="@color/black"/>
+        </RelativeLayout>
     </android.support.v7.widget.CardView>
 </ScrollView>
