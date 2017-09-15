@@ -54,7 +54,6 @@ public class CafeFragment extends Fragment {
             homeList.add(new CafeFeedItem("5","کافه نوژان","کرمان"   , R.drawable.coffeeshop_7));
             mAdapter.notifyDataSetChanged();
         }
-
         return rootView;
     }
 

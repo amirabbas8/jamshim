@@ -27,6 +27,11 @@ public class MediaFragment extends Fragment {
 
     private RecyclerView recyclerView;
 
+    @Override
+    public void onPause() {
+        super.onPause();
+        mAdapter.setVideoPause();
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

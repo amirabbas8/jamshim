@@ -24,7 +24,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-
 public class MainActivity extends AppCompatActivity {
 
 
@@ -68,13 +67,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setupViewPager(final ViewPager viewPager) {
-        ViewPagerAdapter adapter;
+        final ViewPagerAdapter adapter;
         adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFrag(new CafeFragment(), "");
         adapter.addFrag(new MediaFragment(), "");
         adapter.addFrag(new TeamFragment(), "");
         adapter.addFrag(new RecommendFragment(), "");
         viewPager.setAdapter(adapter);
+
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) { }
+            @Override
+            public void onPageSelected(int position) {    }
+            @Override
+            public void onPageScrollStateChanged(int state) {  adapter.getItem(1).onPause();  }
+        });
     }
 
     private class ViewPagerAdapter extends FragmentPagerAdapter {
