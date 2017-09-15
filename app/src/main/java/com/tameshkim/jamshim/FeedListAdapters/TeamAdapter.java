@@ -30,7 +30,6 @@ public class TeamAdapter extends RecyclerView.Adapter<TeamAdapter.MyViewHolder> 
      teams = (TextView) view.findViewById(R.id.teams);
             cardView = (CardView) view.findViewById(R.id.card_view);
 
-
         }
     }
 
@@ -39,6 +38,7 @@ public class TeamAdapter extends RecyclerView.Adapter<TeamAdapter.MyViewHolder> 
         this.activity = activity;
         this.teamList = teamList;
     }
+
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -51,6 +51,7 @@ public class TeamAdapter extends RecyclerView.Adapter<TeamAdapter.MyViewHolder> 
     public void onBindViewHolder(final MyViewHolder holder, int position) {
         TeamFeedItem item=teamList.get(position);
         holder.teams.setText(item.getTeams());
+        holder.cardView.setBackground(activity.getDrawable(item.getDrawable()));
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

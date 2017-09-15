@@ -2,7 +2,8 @@
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/coordinatorLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white">
 
 
     <RelativeLayout
@@ -23,6 +24,7 @@
             android:layout_alignParentStart="true"
             android:layout_toStartOf="@+id/space"
             android:theme="@android:style/Theme.Holo" />
+
         <android.support.v4.widget.Space
             android:id="@+id/space"
             android:layout_width="5dp"
@@ -45,7 +47,6 @@
             android:layout_below="@id/spinner"
             android:layout_marginTop="10dp"
             android:scrollbars="vertical" />
-
 
 
 
