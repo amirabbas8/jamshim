@@ -7,7 +7,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="8b920c8edb05cba64e4662b531e0f8ece31694dd">
+        sha1="e74bcd75894e706d1b791ec24f55b619259d4b5c">
         <dex dex="/home/amirabbas/jamshim/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_1a5dcf125512f62092f5f97975ffdf85f9d9200b/classes.dex" />
     </item>
 

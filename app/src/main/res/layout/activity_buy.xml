@@ -29,14 +29,16 @@
                 android:textSize="20sp"
                 android:layout_gravity="center"
                 android:gravity="center"/>
+
             <TextView
-                android:paddingTop="19dp"
+                android:id="@+id/name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="کافه ترانزیت"
-                android:textSize="30sp"
                 android:layout_gravity="center"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:paddingTop="19dp"
+                android:text="کافه ترانزیت"
+                android:textSize="30sp" />
             <TextView
                 android:paddingTop="19dp"
                 android:layout_width="match_parent"
@@ -45,14 +47,16 @@
                 android:textSize="20sp"
                 android:layout_gravity="center"
                 android:gravity="center"/>
+
             <TextView
-                android:paddingTop="19dp"
+                android:id="@+id/date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="1396/06/23 20:30"
-                android:textSize="30sp"
                 android:layout_gravity="center"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:paddingTop="19dp"
+                android:text="1396/06/23 20:30"
+                android:textSize="30sp" />
             <TextView
                 android:paddingTop="19dp"
                 android:layout_width="match_parent"
@@ -61,14 +65,16 @@
                 android:textSize="20sp"
                 android:layout_gravity="center"
                 android:gravity="center"/>
+
             <TextView
-                android:paddingTop="19dp"
+                android:id="@+id/teams"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="تیم اول : تیم دوم"
-                android:textSize="30sp"
                 android:layout_gravity="center"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:paddingTop="19dp"
+                android:text="تیم اول : تیم دوم"
+                android:textSize="30sp" />
             <TextView
                 android:paddingTop="19dp"
                 android:layout_width="match_parent"
@@ -77,34 +83,18 @@
                 android:textSize="20sp"
                 android:layout_gravity="center"
                 android:gravity="center"/>
+
             <EditText
-                android:paddingTop="19dp"
+                android:id="@+id/count"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="تعداد بلیط"
-                android:textSize="30sp"
                 android:layout_gravity="center"
-                android:gravity="center"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <CheckBox
-                    android:id="@+id/buy_checkbox"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"/>
-                <TextView
-                    android:layout_weight="3"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="قوانین را میپذیرم"
-                    android:textSize="20sp"
-                    android:layout_gravity="center"
-                    android:gravity="center"/>
-            </LinearLayout>
+                android:gravity="center"
+                android:inputType="number"
+                android:hint="تعداد بلیط"
+                android:paddingTop="19dp"
+                android:textSize="30sp" />
+
             <Button
                 android:id="@+id/buy_button"
                 android:layout_width="match_parent"
