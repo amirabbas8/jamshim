@@ -56,11 +56,9 @@ public class TeamFragment extends Fragment {
         feedList.add(new TeamFeedItem("6","بورنموث - برایتون" , R.drawable.stadium_3));
         feedList.add(new TeamFeedItem("7","لیورپول - برنلی" , R.drawable.stadium_1));
         feedList.add(new TeamFeedItem("8","هانوفر - هامبورگ" , R.drawable.stadium_3));
-        feedList.add(new TeamFeedItem("9","رءال سوسیاد - رءال مادرید" , R.drawable.stadium_1));
+        feedList.add(new TeamFeedItem("9","رئال سوسیاد - رئال مادرید" , R.drawable.stadium_1));
         feedList.add(new TeamFeedItem("10","خیرونیا - سویا" , R.drawable.stadium_3 ));
         mAdapter.notifyDataSetChanged();
-
-        TeamFeedItem teamFeedItem ;
 
 
         Spinner spinner = (Spinner) rootView.findViewById(R.id.spinner);
