@@ -27,10 +27,8 @@ public class CafeAdapter extends RecyclerView.Adapter<CafeAdapter.MyViewHolder> 
         private MyViewHolder(View view) {
             super(view);
             cardView = (CardView) view.findViewById(R.id.card_view);
-           name = (TextView) view.findViewById(R.id.name);
+            name = (TextView) view.findViewById(R.id.name);
             address = (TextView) view.findViewById(R.id.address);
-
-
         }
     }
 
