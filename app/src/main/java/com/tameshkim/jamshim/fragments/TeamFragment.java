@@ -48,20 +48,26 @@ public class TeamFragment extends Fragment {
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(mAdapter);
-        TeamFeedItem cafeFeedItem =new TeamFeedItem();
-        cafeFeedItem.setId("1");
-        cafeFeedItem.setTeams("est:pir");
-        feedList.add(cafeFeedItem);
+        feedList.add(new TeamFeedItem("1","استقلال - پرسپولیس"));
+        feedList.add(new TeamFeedItem("2","ذوب آهن - سپاهان"));
+        feedList.add(new TeamFeedItem("3","تراکتور سازی - سیاه جامگان"));
+        feedList.add(new TeamFeedItem("4","مس کرمان- استقلال خوزستان"));
+        feedList.add(new TeamFeedItem("5","تربیت یزد - صنعت نفت"));
+        feedList.add(new TeamFeedItem("6","بورنموث - برایتون"));
+        feedList.add(new TeamFeedItem("7","لیورپول - برنلی"));
+        feedList.add(new TeamFeedItem("8","هانوفر - هامبورگ"));
+        feedList.add(new TeamFeedItem("9","رءال سوسیاد - رءال مادرید"));
+        feedList.add(new TeamFeedItem("10","خیرونیا - سویا"));
         mAdapter.notifyDataSetChanged();
 
 
 
         Spinner spinner = (Spinner) rootView.findViewById(R.id.spinner);
-        String[] arrayStrings=new String[]{"خدمت اصلی","خدمت دوم","خدمت سوم"};
+        String[] arrayStrings=new String[]{"فوتبال"};
         ArrayAdapter adapter=new ArrayAdapter<>(this.getContext(),R.layout.spiner_item,arrayStrings);
         spinner.setAdapter(adapter);
         Spinner spinner2 = (Spinner) rootView.findViewById(R.id.spinner2);
-        String[] arrayStrings2=new String[]{"خدمت اصلی","خدمت دوم","خدمت سوم"};
+        String[] arrayStrings2=new String[]{"جام خلیج فارسی","لیگ برتر انگلیس","لالیگا اسپانیا","بندسلیگاآلمان"};
         ArrayAdapter<String> adapter2=new ArrayAdapter<>(this.getContext(),R.layout.spiner_item,arrayStrings2);
         spinner2.setAdapter(adapter2);
         return rootView;

@@ -46,11 +46,11 @@ public class CafeFragment extends Fragment {
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(mAdapter);
-        CafeFeedItem cafeFeedItem =new CafeFeedItem();
-        cafeFeedItem.setId("1");
-        cafeFeedItem.setName("salam");
-        cafeFeedItem.setAddress("address");
-        homeList.add(cafeFeedItem);
+        homeList.add(new CafeFeedItem("1","کافه زاگرش","تهران"));
+        homeList.add(new CafeFeedItem("2","کافه سفید","یزد"));
+        homeList.add(new CafeFeedItem("3","کافه هرمس","اصفهان"));
+        homeList.add(new CafeFeedItem("4","کافه بالسا","تبریز"));
+        homeList.add(new CafeFeedItem("5","کافه لژان","کرمان"));
         mAdapter.notifyDataSetChanged();
         return rootView;
     }

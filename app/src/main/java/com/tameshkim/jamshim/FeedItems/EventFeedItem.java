@@ -6,7 +6,12 @@ public class EventFeedItem {
 
     public EventFeedItem() {
     }
-
+    public EventFeedItem(String id,String name,String teams,String date) {
+        this.id=id;
+        this.name=name;
+        this.teams=teams;
+        this.date=date;
+    }
 
     public String getId() {
         return id;
