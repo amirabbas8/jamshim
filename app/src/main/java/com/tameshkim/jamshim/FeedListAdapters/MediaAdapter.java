@@ -5,7 +5,6 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,8 +18,6 @@ import com.tameshkim.jamshim.R;
 
 import java.util.List;
 
-import static android.content.ContentValues.TAG;
-
 /**
  * Created by amirh on 15/09/17.
  */
@@ -30,7 +27,8 @@ public class MediaAdapter extends RecyclerView.Adapter<MediaAdapter.MyViewHolder
     private List<MediaFeedItem> eventList;
     private Activity activity;
 
-    private ImageView playImageView;
+    private ImageView playImageView1;
+    private ImageView playImageView2;
     private VideoView video;
 
 
@@ -51,7 +49,8 @@ public class MediaAdapter extends RecyclerView.Adapter<MediaAdapter.MyViewHolder
             desc2 = (TextView) view.findViewById(R.id.desc_cardview2);
             desc3 = (TextView) view.findViewById(R.id.desc_cardview3);
 
-            playImageView = (ImageView) view.findViewById(R.id.play_imageview);
+            playImageView1 = (ImageView) view.findViewById(R.id.play_imageview1);
+            playImageView2 = (ImageView) view.findViewById(R.id.play_imageview2);
             video = (VideoView) view.findViewById(R.id.video_view);
         }
     }
@@ -104,12 +103,11 @@ public class MediaAdapter extends RecyclerView.Adapter<MediaAdapter.MyViewHolder
             }
         });
 
-        playImageView.setOnClickListener(new View.OnClickListener() {
+        playImageView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                playImageView.setVisibility(View.INVISIBLE);
-
+                playImageView1.setVisibility(View.INVISIBLE);
                 holder.title1.setVisibility(View.INVISIBLE);
                 holder.desc1.setVisibility(View.INVISIBLE);
 
@@ -123,9 +121,44 @@ public class MediaAdapter extends RecyclerView.Adapter<MediaAdapter.MyViewHolder
                     public void onCompletion(MediaPlayer mediaPlayer) {
 
                         mediaPlayer.start();
-                        playImageView.setVisibility(View.VISIBLE);
+                        playImageView1.setVisibility(View.VISIBLE);
                         holder.title1.setVisibility(View.VISIBLE);
                         holder.desc1.setVisibility(View.VISIBLE);
+                        video.setVisibility(View.INVISIBLE);
+                    }
+                });
+                video.start();
+
+            }
+        });
+
+        playImageView2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                playImageView1.setVisibility(View.INVISIBLE);
+                playImageView2.setVisibility(View.INVISIBLE);
+                holder.title1.setVisibility(View.INVISIBLE);
+                holder.title2.setVisibility(View.INVISIBLE);
+                holder.desc1.setVisibility(View.INVISIBLE);
+                holder.desc2.setVisibility(View.INVISIBLE);
+
+                MediaController mc= new MediaController(activity);
+                video.setVisibility(View.VISIBLE);
+                String path = "android.resource://" + activity.getPackageName() +  "/" + R.raw.coffee_video ;
+                video.setVideoURI(Uri.parse(path));
+                video.setMediaController(mc);
+                video.setOnCompletionListener( new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mediaPlayer) {
+
+                        mediaPlayer.start();
+                        playImageView1.setVisibility(View.VISIBLE);
+                        playImageView2.setVisibility(View.VISIBLE);
+                        holder.title1.setVisibility(View.VISIBLE);
+                        holder.title2.setVisibility(View.VISIBLE);
+                        holder.desc1.setVisibility(View.VISIBLE);
+                        holder.desc2.setVisibility(View.VISIBLE);
                         video.setVisibility(View.INVISIBLE);
                     }
                 });
