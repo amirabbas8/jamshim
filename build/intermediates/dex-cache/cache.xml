@@ -2,22 +2,22 @@
 <items version="2" >
 
     <item
-        is-multidex="true"
-        jar="/home/amirh/Documents/AndroidStudioProjects/0Repo/jamshid_2/jamshim/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="/home/amirabbas/Programs/android-sdk-linux/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.0-alpha7/constraint-layout-solver-1.0.0-alpha7.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
-        <dex dex="/home/amirh/Documents/AndroidStudioProjects/0Repo/jamshid_2/jamshim/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_8bd34a83bbe2e12d50ff41f0c24a496040b5c78a/classes.dex" />
+        sha1="439eeb5ffd54cbd18db0a6aea471e8356f19fc36">
+        <dex dex="/home/amirabbas/jamshim/app/build/intermediates/pre-dexed/debug/constraint-layout-solver-1.0.0-alpha7_9d9fd1ef9a1bf615fbfe9da64403352cebea5d94.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/home/amirh/Documents/AndroidStudioProjects/0Repo/jamshid_2/jamshim/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="/home/amirabbas/.android/build-cache/13577e0e2df1ebcd02552de12cf7f6a19678e098/output/jars/classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="5b6dc7aa02eeed020e60c5742e3399fd8f681ffa">
-        <dex dex="/home/amirh/Documents/AndroidStudioProjects/0Repo/jamshid_2/jamshim/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_d645dcb3984005e0f3b187b8a9af122c55b8a7a7/classes.dex" />
+        sha1="541a2ad68dc68aa49795821f8280b7624e6a0c9b">
+        <dex dex="/home/amirabbas/jamshim/app/build/intermediates/pre-dexed/debug/classes_f0e213cf90534051a9601ff7fc121f93d5d24a78.jar" />
     </item>
 
 </items>
