@@ -112,7 +112,7 @@ public class MediaAdapter extends RecyclerView.Adapter<MediaAdapter.MyViewHolder
 
                 MediaController mc= new MediaController(activity);
                 video.setVisibility(View.VISIBLE);
-                String path = "android.resource://" + activity.getPackageName() +  "/" + R.raw.video2 ;
+                String path = "android.resource://" + activity.getPackageName() +  "/" + R.raw.video ;
                 video.setVideoURI(Uri.parse(path));
                 video.setMediaController(mc);
                 video.setOnCompletionListener( new MediaPlayer.OnCompletionListener() {
