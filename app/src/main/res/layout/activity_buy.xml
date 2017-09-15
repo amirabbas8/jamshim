@@ -5,9 +5,9 @@
     xmlns:card_view="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.tameshkim.jamshim.BuyActivity">
+    >
     <android.support.v7.widget.CardView
-        android:layout_width="368dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         app:cardBackgroundColor="#FFFFFF"
@@ -37,7 +37,7 @@
                 android:gravity="center"
                 android:paddingTop="19dp"
                 android:text="کافه ترانزیت"
-                android:textSize="30sp" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
             <TextView
                 android:paddingTop="19dp"
                 android:layout_width="match_parent"
@@ -55,7 +55,7 @@
                 android:gravity="center"
                 android:paddingTop="19dp"
                 android:text="1396/06/23 20:30"
-                android:textSize="30sp" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
             <TextView
                 android:paddingTop="19dp"
                 android:layout_width="match_parent"
@@ -73,15 +73,7 @@
                 android:gravity="center"
                 android:paddingTop="19dp"
                 android:text="تیم اول : تیم دوم"
-                android:textSize="30sp" />
-            <TextView
-                android:paddingTop="19dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="تعداد بلیط"
-                android:textSize="20sp"
-                android:layout_gravity="center"
-                android:gravity="center"/>
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             <EditText
                 android:id="@+id/count"
@@ -96,10 +88,13 @@
 
             <Button
                 android:id="@+id/buy_button"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="خرید"
-                android:textSize="25sp"/>
+                android:textSize="25sp"
+                android:layout_margin="5dp"
+                android:layout_gravity="center"
+                android:background="@color/colorPrimaryDark"/>
         </LinearLayout>
     </android.support.v7.widget.CardView>
 </ScrollView>
