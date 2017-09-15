@@ -49,13 +49,13 @@ public class CafeAdapter extends RecyclerView.Adapter<CafeAdapter.MyViewHolder> 
 
     @Override
     public void onBindViewHolder(final MyViewHolder holder, int position) {
-        CafeFeedItem item=homeList.get(position);
+        final CafeFeedItem item=homeList.get(position);
         holder.name.setText(item.getName());
         holder.address.setText(item.getAddress());
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                activity.startActivity(new Intent(activity, EventActivity.class));
+                activity.startActivity(new Intent(activity, EventActivity.class).putExtra("name",item.getName()));
             }
         });
 
